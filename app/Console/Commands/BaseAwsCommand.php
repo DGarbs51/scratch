@@ -24,15 +24,17 @@ class BaseAwsCommand extends Command
 
     /**
      * Get AWS SDK configuration.
+     *
+     * @param  string|null  $region  Optional region to override the default region
      */
-    protected function getAwsConfig(): array
+    protected function getAwsConfig(?string $region = null): array
     {
         $accessKeyId = config('services.aws.access_key_id');
         $secretAccessKey = config('services.aws.secret_access_key');
-        $region = config('services.aws.region');
+        $defaultRegion = config('services.aws.region');
 
         $config = [
-            'region' => $region,
+            'region' => $region ?? $defaultRegion,
         ];
 
         // If credentials are explicitly set, use them
