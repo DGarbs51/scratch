@@ -1,0 +1,16 @@
+{
+    "name": "dgarbs51/scratch",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Dgarbs51\\Scratch\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Devon Garbalosa",
+            "email": "devon@laravel.com"
+        }
+    ],
+    "require": {}
+}
