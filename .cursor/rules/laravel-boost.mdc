@@ -2,6 +2,35 @@
 alwaysApply: true
 ---
 <laravel-boost-guidelines>
+=== .ai/aws-sdk rules ===
+
+# AWS SDK Guidelines
+
+## Overview
+
+The AWS SDK is a library that provides a simple interface for interacting with AWS services. It is used to interact with AWS services such as S3, SQS, SNS, etc.
+
+## Rules
+
+- Always use the service client classes to interact with AWS services, rather than the SDK class.
+
+
+=== .ai/aws-commands rules ===
+
+# AWS Commands Guidelines
+
+## Overview
+
+The AWS commands are used to interact with AWS services. They are used to list AWS services, create AWS services, etc.
+
+## Rules
+
+- the commands should be named like `aws:*:*`
+- the commands should be placed in the `App\Console\Commands` namespace
+- the commands should be documented in the `app/Console/Commands` namespace
+- the commands should extend the `BaseAwsCommand` class
+
+
 === foundation rules ===
 
 # Laravel Boost Guidelines
